@@ -1,0 +1,17 @@
+syntax = "proto3";
+package org.example;
+
+message Request{
+  int32 id = 1;
+}
+
+message Response{
+  int32 id = 1;
+  string firstname = 2;
+  string lastname = 3;
+  int32  age = 4;
+}
+
+service Service{
+  rpc getData(Request) returns (Response);
+}
